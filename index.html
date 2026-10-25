@@ -1,0 +1,250 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>Maluma, mi cantante favorito</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Unbounded:wght@600;800&family=DM+Sans:wght@400;500;700&display=swap">
+<style>
+/* Layout: cabecera con nombre grande, menu fijo de chips con scroll horizontal, secciones en una columna que pasa a dos en pantallas anchas, pie con autora */
+:root{
+  --bg:#f3f8f8;
+  --surface:#ffffff;
+  --ink:#0d2a2e;
+  --muted:#4d6a6e;
+  --line:#cfe3e4;
+  --teal:#0e9aa7;
+  --teal-soft:#c9f1f4;
+  --teal-deep:#06636c;
+  --font-display:"Unbounded","Arial Black",system-ui,sans-serif;
+  --font-body:"DM Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#071a1d; --surface:#0d2a2e; --ink:#e6f6f7; --muted:#9bbcc0; --line:#1c4448;
+    --teal:#3fd0dc; --teal-soft:#0f4a50; --teal-deep:#7fe3ec; color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#071a1d; --surface:#0d2a2e; --ink:#e6f6f7; --muted:#9bbcc0; --line:#1c4448;
+  --teal:#3fd0dc; --teal-soft:#0f4a50; --teal-deep:#7fe3ec; color-scheme:dark;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:calc(env(safe-area-inset-top,0px) + 64px)}
+body{
+  background:var(--bg);color:var(--ink);font-family:var(--font-body);font-size:16px;line-height:1.6;
+  padding-left:max(16px,env(safe-area-inset-left,0px));
+  padding-right:max(16px,env(safe-area-inset-right,0px));
+  padding-block:0 32px;
+}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);background:var(--bg);z-index:10}
+.wrap{max-width:960px;margin:0 auto}
+a{color:var(--teal-deep)}
+h1,h2{font-family:var(--font-display);text-wrap:balance;margin:0}
+h2{font-size:1.25rem;letter-spacing:.02em;text-transform:uppercase;color:var(--teal-deep);padding-bottom:10px;border-bottom:2px solid var(--teal);margin-bottom:18px}
+
+.hero{padding-block:36px 24px}
+.kicker{font-size:.75rem;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);font-weight:700}
+h1{font-size:clamp(2.6rem,13vw,5.6rem);font-weight:800;line-height:.95;margin-block:10px 14px;color:var(--ink)}
+h1 span{color:var(--teal)}
+.lead{max-width:56ch;color:var(--muted);font-size:1.05rem;margin:0 0 22px}
+.facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px}
+.fact{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:12px 14px;min-width:0}
+.fact b{display:block;font-size:.7rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+.fact span{font-weight:700;overflow-wrap:anywhere}
+
+nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:11;background:var(--bg);padding-block:10px;border-bottom:1px solid var(--line)}
+nav ul{list-style:none;margin:0;padding:0;display:flex;gap:8px;overflow-x:auto;scrollbar-width:none}
+nav ul::-webkit-scrollbar{display:none}
+nav a{display:block;white-space:nowrap;text-decoration:none;font-weight:700;font-size:.85rem;color:var(--teal-deep);background:var(--teal-soft);border-radius:999px;padding:8px 14px}
+nav a:hover,nav a:focus-visible{background:var(--teal);color:#fff;outline:none}
+nav a:focus-visible{box-shadow:0 0 0 3px var(--ink)}
+
+section{padding-block:34px 4px}
+.grid2{display:grid;grid-template-columns:1fr;gap:14px}
+@media(min-width:720px){.grid2{grid-template-columns:1fr 1fr}}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:16px 18px;min-width:0}
+.card h3{margin:0 0 4px;font-size:1.05rem}
+.card p{margin:0;color:var(--muted)}
+.year{font-family:var(--font-display);font-size:.8rem;color:var(--teal-deep);font-weight:600}
+.list{list-style:none;margin:0;padding:0;display:grid;gap:10px}
+.row{display:flex;gap:14px;align-items:baseline;background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:12px 16px}
+.row .year{flex:0 0 3.2rem}
+.row div{min-width:0}
+.row strong{display:block}
+.row small{color:var(--muted)}
+.vid{display:flex;justify-content:space-between;gap:12px;align-items:center;text-decoration:none;color:var(--ink);background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:12px 16px}
+.vid:hover,.vid:focus-visible{border-color:var(--teal);outline:none}
+.vid span.go{flex:0 0 auto;font-size:.8rem;font-weight:700;color:var(--teal-deep);background:var(--teal-soft);border-radius:999px;padding:6px 12px}
+.vid div{min-width:0}
+.vid small{display:block;color:var(--muted)}
+
+.gallery{display:grid;grid-template-columns:repeat(auto-fill,minmax(140px,1fr));gap:10px}
+.tile{aspect-ratio:3/4;border-radius:14px;padding:12px;display:flex;flex-direction:column;justify-content:flex-end;color:#fff;
+  background:linear-gradient(160deg,var(--teal),var(--teal-deep));position:relative;overflow:hidden;min-width:0}
+.tile:nth-child(2n){background:linear-gradient(200deg,#13313a,var(--teal))}
+.tile:nth-child(3n){background:linear-gradient(120deg,var(--teal-deep),#0b1f24)}
+.tile b{font-family:var(--font-display);font-size:.85rem;line-height:1.2}
+.tile small{opacity:.85}
+.tile img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.upload{display:flex;flex-wrap:wrap;gap:12px;align-items:center;margin-top:14px;background:var(--surface);border:1px dashed var(--teal);border-radius:14px;padding:14px 16px}
+.upload label{font-weight:700}
+.upload input{max-width:100%;font:inherit;color:var(--ink)}
+
+.social{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px}
+.social a{display:block;text-decoration:none;background:var(--teal);color:#04262a;font-weight:700;border-radius:14px;padding:14px 16px}
+.social a small{display:block;font-weight:500;opacity:.8}
+.social a:hover,.social a:focus-visible{background:var(--teal-deep);color:#fff;outline:none}
+
+footer{margin-top:44px;padding:22px 18px;background:var(--surface);border:1px solid var(--line);border-radius:18px;text-align:center}
+footer p{margin:0}
+footer .by{font-size:.75rem;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+footer .name{font-family:var(--font-display);font-size:1.1rem;color:var(--teal-deep);margin-top:4px}
+footer .note{margin-top:10px;font-size:.8rem;color:var(--muted)}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+
+<div class="wrap">
+  <header class="hero" id="inicio">
+    <div class="kicker">Mi cantante favorito</div>
+    <h1>MALU<span>MA</span></h1>
+    <p class="lead">Juan Luis Londoño Arias, el artista colombiano de Medellín que llevó el reguetón y el pop latino a los escenarios de todo el mundo.</p>
+    <div class="facts">
+      <div class="fact"><b>Nombre real</b><span>Juan Luis Londoño Arias</span></div>
+      <div class="fact"><b>Nacimiento</b><span>28 de enero de 1994</span></div>
+      <div class="fact"><b>Origen</b><span>Medellín, Colombia</span></div>
+      <div class="fact"><b>Géneros</b><span>Reguetón, pop latino, urbano</span></div>
+    </div>
+  </header>
+
+  <nav aria-label="Menú principal">
+    <ul>
+      <li><a href="#biografia">Biografía</a></li>
+      <li><a href="#giras">Giras</a></li>
+      <li><a href="#discografia">Discografía</a></li>
+      <li><a href="#premios">Premios</a></li>
+      <li><a href="#videos">Videos</a></li>
+      <li><a href="#peliculas">Películas</a></li>
+      <li><a href="#galeria">Galería</a></li>
+      <li><a href="#redes">Redes sociales</a></li>
+      <li><a href="#datos">Datos importantes</a></li>
+    </ul>
+  </nav>
+
+  <section id="biografia">
+    <h2>Biografía</h2>
+    <div class="card">
+      <p>Maluma nació en Medellín y empezó a cantar desde muy joven. Lanzó su primer álbum, <em>Magia</em>, en 2012, y su carrera despegó con <em>Pretty Boy, Dirty Boy</em> en 2015. Con canciones como "Felices los 4" y "Chantaje", junto a Shakira, se convirtió en una de las voces más escuchadas de la música latina.</p>
+    </div>
+  </section>
+
+  <section id="giras">
+    <h2>Giras</h2>
+    <ul class="list">
+      <li class="row"><span class="year">2016</span><div><strong>Pretty Boy, Dirty Boy World Tour</strong><small>Primera gran gira internacional</small></div></li>
+      <li class="row"><span class="year">2018</span><div><strong>F.A.M.E. Tour</strong><small>Conciertos en América y Europa</small></div></li>
+      <li class="row"><span class="year">2019</span><div><strong>11:11 World Tour</strong><small>Gira mundial del álbum 11:11</small></div></li>
+      <li class="row"><span class="year">2021</span><div><strong>Papi Juancho Tour</strong><small>Regreso a los escenarios después de la pandemia</small></div></li>
+      <li class="row"><span class="year">2023</span><div><strong>Don Juan Tour</strong><small>Gira del álbum Don Juan</small></div></li>
+    </ul>
+  </section>
+
+  <section id="discografia">
+    <h2>Discografía</h2>
+    <div class="grid2">
+      <div class="card"><span class="year">2012</span><h3>Magia</h3><p>Su álbum debut.</p></div>
+      <div class="card"><span class="year">2015</span><h3>Pretty Boy, Dirty Boy</h3><p>El disco que lo lanzó al público internacional.</p></div>
+      <div class="card"><span class="year">2018</span><h3>F.A.M.E.</h3><p>Incluye "Felices los 4" y colaboraciones con artistas de varios países.</p></div>
+      <div class="card"><span class="year">2019</span><h3>11:11</h3><p>Disco con "Hawái" y "Soltera" entre sus canciones más conocidas.</p></div>
+      <div class="card"><span class="year">2020</span><h3>Papi Juancho</h3><p>Álbum con un sonido más cercano al reguetón clásico.</p></div>
+      <div class="card"><span class="year">2023</span><h3>Don Juan</h3><p>Disco que mezcla reguetón con baladas y ritmos latinos.</p></div>
+    </div>
+  </section>
+
+  <section id="premios">
+    <h2>Premios</h2>
+    <div class="card">
+      <p>Maluma ha recibido premios y nominaciones en ceremonias importantes de la música latina, entre ellas los Latin Grammy, los Billboard Latin Music Awards, los Latin American Music Awards y Premios Lo Nuestro. Puedes revisar la lista completa y actualizada en su página de Wikipedia.</p>
+      <p style="margin-top:12px"><a href="https://es.wikipedia.org/wiki/Maluma" target="_blank" rel="noopener">Ver premios de Maluma en Wikipedia</a></p>
+    </div>
+  </section>
+
+  <section id="videos">
+    <h2>Videos</h2>
+    <div class="list">
+      <a class="vid" href="https://www.youtube.com/results?search_query=Maluma+Felices+los+4" target="_blank" rel="noopener"><div><strong>Felices los 4</strong><small>2017</small></div><span class="go">Ver en YouTube</span></a>
+      <a class="vid" href="https://www.youtube.com/results?search_query=Shakira+Maluma+Chantaje" target="_blank" rel="noopener"><div><strong>Chantaje (con Shakira)</strong><small>2016</small></div><span class="go">Ver en YouTube</span></a>
+      <a class="vid" href="https://www.youtube.com/results?search_query=Maluma+Hawai" target="_blank" rel="noopener"><div><strong>Hawái</strong><small>2020</small></div><span class="go">Ver en YouTube</span></a>
+      <a class="vid" href="https://www.youtube.com/results?search_query=Maluma+Corazon" target="_blank" rel="noopener"><div><strong>Corazón</strong><small>2018</small></div><span class="go">Ver en YouTube</span></a>
+      <a class="vid" href="https://www.youtube.com/results?search_query=Maluma+Marry+Me+Jennifer+Lopez" target="_blank" rel="noopener"><div><strong>Marry Me (con Jennifer Lopez)</strong><small>2022</small></div><span class="go">Ver en YouTube</span></a>
+    </div>
+  </section>
+
+  <section id="peliculas">
+    <h2>Películas</h2>
+    <div class="card">
+      <span class="year">2022</span>
+      <h3>Marry Me</h3>
+      <p>Comedia romántica con Jennifer Lopez y Owen Wilson. Maluma interpreta a Bastian, un personaje que también es cantante.</p>
+    </div>
+  </section>
+
+  <section id="galeria">
+    <h2>Galería</h2>
+    <div class="gallery" id="gal">
+      <div class="tile"><b>Pretty Boy, Dirty Boy</b><small>2015</small></div>
+      <div class="tile"><b>F.A.M.E. Tour</b><small>2018</small></div>
+      <div class="tile"><b>11:11</b><small>2019</small></div>
+      <div class="tile"><b>Papi Juancho</b><small>2020</small></div>
+      <div class="tile"><b>Marry Me</b><small>2022</small></div>
+      <div class="tile"><b>Don Juan</b><small>2023</small></div>
+    </div>
+    <div class="upload">
+      <label for="foto">Agregar foto</label>
+      <input id="foto" type="file" accept="image/*" multiple>
+    </div>
+  </section>
+
+  <section id="redes">
+    <h2>Redes sociales</h2>
+    <div class="social">
+      <a href="https://www.instagram.com/maluma" target="_blank" rel="noopener">Instagram<small>@maluma</small></a>
+      <a href="https://www.youtube.com/results?search_query=Maluma+oficial" target="_blank" rel="noopener">YouTube<small>Maluma</small></a>
+      <a href="https://www.tiktok.com/@maluma" target="_blank" rel="noopener">TikTok<small>@maluma</small></a>
+      <a href="https://x.com/maluma" target="_blank" rel="noopener">X<small>@maluma</small></a>
+      <a href="https://www.facebook.com/maluma" target="_blank" rel="noopener">Facebook<small>Maluma</small></a>
+    </div>
+  </section>
+
+  <section id="datos">
+    <h2>Datos importantes</h2>
+    <div class="grid2">
+      <div class="card"><h3>De dónde viene su nombre</h3><p>"Maluma" junta las primeras sílabas de los nombres de su mamá, su papá y su hermana: Marlli, Luis y Manuela.</p></div>
+      <div class="card"><h3>Apodo</h3><p>Sus fans lo conocen como "Pretty Boy", nombre que también usó en uno de sus discos.</p></div>
+      <div class="card"><h3>Ciudad natal</h3><p>Medellín, Colombia, ciudad que menciona seguido en sus canciones y entrevistas.</p></div>
+      <div class="card"><h3>Colaboraciones</h3><p>Ha cantado con Shakira, Madonna, The Weeknd, Ricky Martin y Jennifer Lopez, entre otros.</p></div>
+    </div>
+  </section>
+
+  <footer>
+    <p class="by">Página realizada por</p>
+    <p class="name">Iliana Jaquelin Reyes Ávila</p>
+    <p class="note">Práctica 2.1: Cantante favorito. Página de fans con fines escolares.</p>
+  </footer>
+</div>
+
+<script>
+(function(){
+  var input=document.getElementById('foto'), gal=document.getElementById('gal');
+  input.addEventListener('change',function(){
+    Array.prototype.forEach.call(input.files,function(f){
+      var r=new FileReader();
+      r.onload=function(){
+        var t=document.createElement('div');t.className='tile';
+        var i=document.createElement('img');i.src=r.result;i.alt='Foto agregada';
+        t.appendChild(i);gal.appendChild(t);
+      };
+      r.readAsDataURL(f);
+    });
+  });
+})();
+</script>
+
+</body></html>
